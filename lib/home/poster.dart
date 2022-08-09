@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:mymovie/home/moviedetails.dart';
 
 class Poster extends StatelessWidget {
   const Poster({Key? key}) : super(key: key);
@@ -41,21 +42,30 @@ class Poster extends StatelessWidget {
             )
           ]),
           Container(
-            color: Colors.red,
+            color: Colors.black,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'BollyWood',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 22),
+                  child: Text(
+                    'BollyWood',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
                 ),
-                Text(
-                  'See all',
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                Padding(
+                  padding: const EdgeInsets.only(left:200),
+                  child: Text(
+                    'See all',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
                 ),
               ],
             ),
-          )
+
+          ),SizedBox(
+            height: 10,
+          ),
+          MovieDetails()
         ],
       ),
     );
