@@ -3,6 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:mymovie/home/moviedetails.dart';
 
+import '../re/seeall.dart';
+import 'hmoviedetails.dart';
+
 class Poster extends StatelessWidget {
   const Poster({Key? key}) : super(key: key);
 
@@ -41,31 +44,13 @@ class Poster extends StatelessWidget {
               ),
             )
           ]),
-          Container(
-            color: Colors.black,
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 22),
-                  child: Text(
-                    'BollyWood',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left:200),
-                  child: Text(
-                    'See all',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
-                ),
-              ],
-            ),
-
-          ),SizedBox(
+        SeeAll(language: 'BollyWood',),
+          SizedBox(
             height: 10,
           ),
-          MovieDetails()
+          MovieDetails(),
+          SeeAll(language: "HollyWood"),
+          HmovieDetails(),
         ],
       ),
     );

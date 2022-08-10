@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:mymovie/home/movie%20review.dart';
 
-import 'movie review.dart';
-
-class MovieDetails extends StatelessWidget {
-  const MovieDetails({Key? key}) : super(key: key);
-
+class HmovieDetails extends StatelessWidget {
+  const HmovieDetails({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,7 @@ class MovieDetails extends StatelessWidget {
           onTap: (){
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const MoviedeReview()),
+              MaterialPageRoute(builder: (context) =>  MoviedeReview()),
             );
           },
           child: Column(
