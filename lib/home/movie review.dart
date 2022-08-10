@@ -14,7 +14,7 @@ final sampleParagraph = "woman named Avantika fighting Mahishmati soldiers. He d
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
+      body: ListView(
         children: [
           Container(
             height: 80,
@@ -78,7 +78,12 @@ final sampleParagraph = "woman named Avantika fighting Mahishmati soldiers. He d
                 ],
               ),
             ),
-          ),Text("The Cast",style: TextStyle(color: Colors.white),)
+
+          ),Padding(
+            padding: const EdgeInsets.only(left: 18,top: 10),
+            child: Align(alignment: Alignment.topLeft,
+                child: Text("The Cast",style: TextStyle(color: Colors.white,fontSize: 18),)),
+          ),
 
         ],
       ),
