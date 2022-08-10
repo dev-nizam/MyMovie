@@ -1,15 +1,11 @@
-
-
-
-
-
-
 import 'package:flutter/material.dart';
+import 'package:mymovie/re/Cast.dart';
 import 'package:mymovie/re/tabbar.dart';
 
 class MoviedeReview extends StatelessWidget {
   const MoviedeReview({Key? key}) : super(key: key);
-final sampleParagraph = "woman named Avantika fighting Mahishmati soldiers. He discovers that she is a member of a local resistance group dedicated to overthrowing the tyrannical king of Mahishmati, Lord Bhallaladeva, and rescuing royal captive Princess Devasena. Sivudu is immediately smitten with Avantika and secretly follows her, even managing to draw a tattoo on her hand while she sleeps. When she discovers Sivudu she attacks him, but he outmaneuvers her and returns her mask. Realizing he scaled the entire mountain to find her, she reciprocates his feelings.";
+  final sampleParagraph =
+      "woman named Avantika fighting Mahishmati soldiers. He discovers that she is a member of a local resistance group dedicated to overthrowing the tyrannical king of Mahishmati, Lord Bhallaladeva, and rescuing royal captive Princess Devasena. Sivudu is immediately smitten with Avantika and secretly follows her, even managing to draw a tattoo on her hand while she sleeps. When she discovers Sivudu she attacks him, but he outmaneuvers her and returns her mask. Realizing he scaled the entire mountain to find her, she reciprocates his feelings.";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,15 +41,37 @@ final sampleParagraph = "woman named Avantika fighting Mahishmati soldiers. He d
                   backgroundImage: AssetImage("asset/poster/mx.jpg"),
                 ),
               ),
-              Positioned(bottom: 45, right: 150, child: Text("Available Now",style: TextStyle(fontWeight:FontWeight.bold,fontSize: 15,color: Colors.white,),)),
-              Positioned(bottom: 20, right: 130, child: Text("Watch Movie",style: TextStyle(fontWeight:FontWeight.bold,fontSize: 25,color: Colors.white,),)),
+              Positioned(
+                  bottom: 45,
+                  right: 150,
+                  child: Text(
+                    "Available Now",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
+                  )),
+              Positioned(
+                  bottom: 20,
+                  right: 130,
+                  child: Text(
+                    "Watch Movie",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
+                  )),
             ],
           ),
           Padding(
             padding: const EdgeInsets.only(left: 18.0),
             child: Align(
               alignment: Alignment.topLeft,
-              child: Text("The plot",style: const TextStyle(color: Colors.white,fontSize: 18),
+              child: Text(
+                "The plot",
+                style: const TextStyle(color: Colors.white, fontSize: 18),
               ),
             ),
           ),
@@ -61,30 +79,77 @@ final sampleParagraph = "woman named Avantika fighting Mahishmati soldiers. He d
             height: 20,
           ),
           Container(
-            width: 350,
+            width: 280,
             height: 100,
             color: Colors.black,
             child: Text(
-              sampleParagraph,style: TextStyle(
-            color: Colors.white),
-          ),),
+              sampleParagraph,
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.only(left: 18,top: 10),
-            child: Align(alignment: Alignment.topLeft,
+            padding: const EdgeInsets.only(left: 18, top: 10),
+            child: Align(
+              alignment: Alignment.topLeft,
               child: Column(
                 children: [
-                  Text("Director:Todd Phillips",style: TextStyle(color: Colors.white),),
-                  Text("writer:Laura Ballinger",style: TextStyle(color: Colors.white),),
+                  Text(
+                    "Director:Todd Phillips",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    "writer:Laura Ballinger",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ],
               ),
             ),
-
-          ),Padding(
-            padding: const EdgeInsets.only(left: 18,top: 10),
-            child: Align(alignment: Alignment.topLeft,
-                child: Text("The Cast",style: TextStyle(color: Colors.white,fontSize: 18),)),
           ),
-
+          Padding(
+            padding: const EdgeInsets.only(left: 18, top: 10),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                "The Cast",
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
+            ),
+          ),
+          ListView(
+             scrollDirection: Axis.horizontal,
+            children: [
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+              Cast(
+                  Image: "asset/poster/maxresdefault.jpg",
+                  name: "sulaiman"),
+            ],
+          ),
         ],
       ),
     );
